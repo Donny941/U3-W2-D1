@@ -26,7 +26,7 @@ class BookList extends Component {
                 ))}
               </Row>
             </Col>
-            <Col md={4} className="sticky-top">
+            <Col md={4}>
               <CommentArea id={this.state.bookAsin} />
             </Col>
           </Row>
