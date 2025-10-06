@@ -48,8 +48,7 @@ class CommentArea extends Component {
             <p>Click one book to load comments!</p>
           </Alert>
         )}
-
-        <AddComment id={this.props.id} commentRefresh={this.commentLoad} />
+        {this.props.id && <AddComment id={this.props.id} commentRefresh={this.commentLoad} />}
       </div>
     );
   }
