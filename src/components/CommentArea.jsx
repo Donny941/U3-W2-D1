@@ -1,7 +1,7 @@
 import { Component } from "react";
 import CommentList from "./CommentList";
 import AddComment from "./AddComment";
-import { Alert, Spinner } from "react-bootstrap";
+import { Alert } from "react-bootstrap";
 
 class CommentArea extends Component {
   state = {
@@ -42,7 +42,7 @@ class CommentArea extends Component {
   render() {
     return (
       <div className="nav-bg p-4 rounded border border-info border-3 me-5">
-        <CommentList comments={this.state.comments} />
+        {this.props.id && <CommentList comments={this.state.comments} />}
         {!this.props.id && (
           <Alert variant="info">
             <p>Click one book to load comments!</p>
